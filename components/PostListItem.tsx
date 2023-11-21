@@ -1,4 +1,4 @@
-import { View, Text, StyleSheet, Image, Pressable } from 'react-native';
+import { View, Text, StyleSheet, Image, Pressable, Alert, Button,TouchableOpacity } from 'react-native';
 import { Post } from '../types';
 import { FontAwesome } from '@expo/vector-icons';
 import { Link } from 'expo-router';
@@ -18,6 +18,19 @@ const FooterButton = ({ text, icon }: FooterButtonProp) => (
         <Text style={styles.footerButtonText}>{text}</Text>
     </View>
 );
+
+const callAlert = () =>
+    Alert.alert(
+        'calling ',
+        '+91 6395072273',
+        [
+            {
+                text: 'Stop call ',
+                
+            },
+        ],
+       
+    );
 
 const PostListItem = ({ post }: PostListItemProps) => {
     return (
@@ -40,7 +53,14 @@ const PostListItem = ({ post }: PostListItemProps) => {
                 )}
 
                 <View style={styles.footer}>
-                    <FooterButton text="Call Now" icon="phone" />
+                    <TouchableOpacity style={styles.footerButton} onPress={callAlert}>
+                    <FooterButton text="call now" icon="phone" />
+                        <Text>.</Text>
+                        
+                    </TouchableOpacity>
+
+
+
                     <FooterButton text="Share" icon="share" />
                 </View>
             </Pressable>
@@ -98,6 +118,10 @@ const styles = StyleSheet.create({
         color: 'gray',
         fontWeight: '600',
     },
+    icon: {
+        marginRight:25
+    }
+
 });
 
 export default PostListItem;
