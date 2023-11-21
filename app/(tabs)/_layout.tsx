@@ -1,7 +1,7 @@
 import FontAwesome from '@expo/vector-icons/FontAwesome';
 import { Link, Tabs } from 'expo-router';
 import { Pressable, useColorScheme } from 'react-native';
-
+import { AntDesign } from '@expo/vector-icons';
 import Colors from '../../constants/Colors';
 
 /**
@@ -11,7 +11,7 @@ function TabBarIcon(props: {
   name: React.ComponentProps<typeof FontAwesome>['name'];
   color: string;
 }) {
-  return <FontAwesome size={28} style={{ marginBottom: -3 }} {...props} />;
+  return <FontAwesome size={26} style={{ marginBottom: -3 }} {...props} />;
 }
 
 export default function TabLayout() {
@@ -25,14 +25,14 @@ export default function TabLayout() {
       <Tabs.Screen
         name="index"
         options={{
-          title: 'Tab One',
-          tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />,
+          title: 'Buy // Rent',
+          tabBarIcon: ({ color }) => <TabBarIcon name="home" color={color} />,
           headerRight: () => (
-            <Link href="/modal" asChild>
+            <Link href="/profile" asChild>
               <Pressable>
                 {({ pressed }) => (
                   <FontAwesome
-                    name="info-circle"
+                    name="user"
                     size={25}
                     color={Colors[colorScheme ?? 'light'].text}
                     style={{ marginRight: 15, opacity: pressed ? 0.5 : 1 }}
@@ -43,11 +43,28 @@ export default function TabLayout() {
           ),
         }}
       />
+      
       <Tabs.Screen
-        name="two"
+        name="new-post"
         options={{
-          title: 'Tab Two',
-          tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />,
+          title: "Post",
+          tabBarIcon: ({ color }) => (
+            <TabBarIcon name="plus-square" color={color} />
+          ),
+        }}
+      />
+      <Tabs.Screen
+        name="Map"
+        options={{
+          title: 'Map',
+          tabBarIcon: ({ color }) => <AntDesign name="tag" size={24} color="gray" />,
+        }}
+      />
+      <Tabs.Screen
+        name="Community"
+        options={{
+          title: 'Community',
+          tabBarIcon: ({ color }) =>  <TabBarIcon name="group" color={color} />,
         }}
       />
     </Tabs>
