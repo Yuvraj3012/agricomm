@@ -60,13 +60,7 @@ export default function TabLayout() {
           tabBarIcon: ({ color }) => <AntDesign name="tag" size={24} color="gray" />,
         }}
       />
-      <Tabs.Screen
-        name="Community"
-        options={{
-          title: 'Community',
-          tabBarIcon: ({ color }) =>  <TabBarIcon name="group" color={color} />,
-        }}
-      />
+    
     </Tabs>
   );
 }
