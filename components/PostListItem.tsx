@@ -95,8 +95,10 @@ const styles = StyleSheet.create({
         color: 'grey',
     },
     content: {
-        margin: 10,
+        margin: 15,
         marginTop: 0,
+        fontWeight:'500',
+        fontSize: 15,
     },
     postImage: {
         width: '100%',
