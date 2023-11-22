@@ -53,7 +53,7 @@ const WorkListItem = ({ apost }: PostListItemProps) => {
 
                 </TouchableOpacity>
                 <TouchableOpacity style={styles.footerButton}>
-                <FooterButton text="." icon="rupee" />
+                <FooterButton text="" icon="rupee" />
                 <Text style={styles.footerButton}>{apost.price}</Text>
 
                 </TouchableOpacity>
