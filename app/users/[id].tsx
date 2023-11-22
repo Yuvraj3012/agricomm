@@ -5,12 +5,28 @@ import {
     Image,
     Pressable,
     ScrollView,
+    TouchableOpacity,
+    Alert,
   } from 'react-native';
   import React, { useLayoutEffect, useState } from 'react';
   import dummyUser from '../../assets/data/user.json';
   import { useLocalSearchParams, useNavigation } from 'expo-router';
   import { User } from '../../types';
   
+
+  const callAlert = () =>
+    Alert.alert(
+        'calling ',
+        '+91 6395072273',
+        [
+            {
+                text: 'Stop call ',
+
+            },
+        ],
+
+    );
+
   const UserProfile = () => {
     const [user, setUser] = useState<User>(dummyUser);
     const { id } = useLocalSearchParams();
@@ -30,9 +46,9 @@ import {
             <Text style={styles.name}>{user.name}</Text>
             <Text>{user.position}</Text>
   
-            <Pressable style={styles.button}>
+            <TouchableOpacity style={styles.button} onPress={callAlert}>
               <Text style={styles.buttonText}>Get In Touch</Text>
-            </Pressable>
+            </TouchableOpacity>
           </View>
         </View>
   

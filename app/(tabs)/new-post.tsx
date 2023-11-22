@@ -64,21 +64,22 @@ export default function NewPostScreen() {
         <Pressable onPress={pickImage} style={styles.iconBtton}>
           <FontAwesome
             name="image"
-            size={24} color="black"
+            size={25} color="black"
             style={styles.iconBtton}
           />
         </Pressable>
+       
         <View style={styles.iconBtton}>
           <FontAwesome
-            name="camera"
-            size={24} color="black"
+            name="location-arrow"
+            size={25} color="black"
             style={styles.iconBtton}
           />
         </View>
         <View style={styles.iconBtton}>
           <FontAwesome
-            name="location-arrow"
-            size={24} color="black"
+            name="briefcase"
+            size={25} color="black"
             style={styles.iconBtton}
           />
         </View>
@@ -97,6 +98,8 @@ const styles = StyleSheet.create({
   },
   input: {
     fontSize: 18,
+    backgroundColor:'white',
+    textShadowColor:'black',
   },
   image:{
     width:'100%',

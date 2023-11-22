@@ -63,8 +63,14 @@ const UpdateProfileScreen = () => {
         //onChangeText={setName}
       />
       <TextInput
-        placeholder="Telephone Number"
+        placeholder="+91 6395073373"
         style={styles.input3}
+        //value={name}
+        //onChangeText={setName}
+      />
+      <TextInput
+        placeholder="abc@gmail.com "
+        style={styles.input4}
         //value={name}
         //onChangeText={setName}
       />
@@ -93,7 +99,7 @@ const styles = StyleSheet.create({
     borderRadius: 500,
   },
   input: {
-    borderColor: "lightgrayVa",
+    
     borderBottomWidth: StyleSheet.hairlineWidth,
     width: "100%",
     marginVertical: 10,
@@ -124,6 +130,16 @@ const styles = StyleSheet.create({
     width: "100%",
     marginVertical: 10,
     padding: 10,
+    marginTop:10,
+    fontSize:15,
+    fontWeight: 'bold',
+  },
+  input4: {
+    borderColor: "lightgrayVa",
+    borderBottomWidth: StyleSheet.hairlineWidth,
+    width: "100%",
+    marginVertical: 10,
+    padding: 15,
     marginTop:10,
     fontSize:15,
     fontWeight: 'bold',
