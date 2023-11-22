@@ -25,7 +25,7 @@ export default function TabLayout() {
       <Tabs.Screen
         name="index"
         options={{
-          title: 'Buy // Rent',
+          title: 'Buy // lease',
           tabBarIcon: ({ color }) => <TabBarIcon name="home" color={color} />,
           headerRight: () => (
             <Link href="/profile" asChild>
@@ -58,6 +58,15 @@ export default function TabLayout() {
         options={{
           title: 'Map',
           tabBarIcon: ({ color }) => <AntDesign name="tag" size={24} color="gray" />,
+        }}
+      />
+      <Tabs.Screen
+        name="workers"
+        options={{
+          title: "Hire workers ",
+          tabBarIcon: ({ color }) => (
+            <TabBarIcon name="search" color={color} />
+          ),
         }}
       />
     

@@ -1,4 +1,4 @@
-import { View, Text, StyleSheet, Image, Pressable, Alert, Button,TouchableOpacity } from 'react-native';
+import { View, Text, StyleSheet, Image, Pressable, Alert, Button, TouchableOpacity } from 'react-native';
 import { Post } from '../types';
 import { FontAwesome } from '@expo/vector-icons';
 import { Link } from 'expo-router';
@@ -26,10 +26,10 @@ const callAlert = () =>
         [
             {
                 text: 'Stop call ',
-                
+
             },
         ],
-       
+
     );
 
 const PostListItem = ({ post }: PostListItemProps) => {
@@ -54,12 +54,10 @@ const PostListItem = ({ post }: PostListItemProps) => {
 
                 <View style={styles.footer}>
                     <TouchableOpacity style={styles.footerButton} onPress={callAlert}>
-                    <FooterButton text="call now" icon="phone" />
+                        <FooterButton text="call now" icon="phone" />
                         <Text>.</Text>
-                        
+
                     </TouchableOpacity>
-
-
 
                     <FooterButton text="Share" icon="share" />
                 </View>
@@ -97,7 +95,7 @@ const styles = StyleSheet.create({
     content: {
         margin: 15,
         marginTop: 0,
-        fontWeight:'500',
+        fontWeight: '500',
         fontSize: 15,
     },
     postImage: {
@@ -121,7 +119,7 @@ const styles = StyleSheet.create({
         fontWeight: '600',
     },
     icon: {
-        marginRight:25
+        marginRight: 25
     }
 
 });

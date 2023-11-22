@@ -14,3 +14,12 @@ export type User ={
     backImage?: string;
     about?: string;
 };
+export type WPost ={
+    id:string;
+    content:string;
+    price:string;
+    image?:string;
+    likes:number;
+    author:User;
+};
+
